@@ -152,9 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b69406d02fb2046b0a883a99a8b829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicButtonOn: {fileID: 2110316542}
-  MusicButtonOff: {fileID: 515587891}
-  customMusicBG: {fileID: 1271274601}
+  _musicButtonOn: {fileID: 2110316542}
+  _musicButtonOff: {fileID: 515587891}
+  _customMusicBG: {fileID: 1271274601}
 --- !u!4 &125314581
 Transform:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 7
+  _levelIndex: 7
 --- !u!114 &307090470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 12
+  _levelIndex: 12
 --- !u!114 &603305879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,7 +2345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 3
+  _levelIndex: 3
 --- !u!114 &746705231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3611,7 +3611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 11
+  _levelIndex: 11
 --- !u!114 &1194277483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4505,7 +4505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 8
+  _levelIndex: 8
 --- !u!114 &1397313495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4789,7 +4789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 4
+  _levelIndex: 4
 --- !u!114 &1461461480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5178,8 +5178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a5039fc22ac6c4b92b91736dff10d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelsObject: {fileID: 724212016}
-  playButton: {fileID: 3771205840390689998}
+  _levelsObject: {fileID: 724212016}
+  _playButton: {fileID: 3771205840390689998}
 --- !u!114 &1558371900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5204,7 +5204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f5d5fb05539f241aa6e3499e269c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelButtons:
+  _levelButtons:
+  - {fileID: 634071339}
   - {fileID: 1650137134}
   - {fileID: 1198015355}
   - {fileID: 447006966}
@@ -5228,7 +5229,6 @@ GameObject:
   - component: {fileID: 1578373840}
   - component: {fileID: 1578373839}
   - component: {fileID: 1578373838}
-  - component: {fileID: 1578373842}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5320,19 +5320,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1578373842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578373837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad5ae50df562294abb79a36e1ed0c35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: 1
 --- !u!1 &1581783108
 GameObject:
   m_ObjectHideFlags: 0
@@ -6107,7 +6094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 6
+  _levelIndex: 6
 --- !u!114 &1687868785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6256,7 +6243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 9
+  _levelIndex: 9
 --- !u!114 &1694416190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6405,7 +6392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 2
+  _levelIndex: 2
 --- !u!114 &1698820460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6554,7 +6541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 5
+  _levelIndex: 5
 --- !u!114 &1706341340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6838,7 +6825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 10
+  _levelIndex: 10
 --- !u!114 &1787216911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7064,7 +7051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fdad3fb72e3904a93a7fa9d48fb8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIndex: 1
+  _levelIndex: 1
 --- !u!114 &2009024173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7818,7 +7805,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3771205840722122816, guid: 8ecae2843acfddf45998b25a687943a9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GoToLevelsScript, Assembly-CSharp
+      value: PlayAndExitButtonTransition, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3771205840722122817, guid: 8ecae2843acfddf45998b25a687943a9, type: 3}
       propertyPath: m_Pivot.x

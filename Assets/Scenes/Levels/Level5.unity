@@ -258,10 +258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4868376843fa68241a755486d7fc6a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pausePanel: {fileID: 156126520}
-  pauseBackground: {fileID: 432611638}
-  buttonPause: {fileID: 1894998487}
-  starObject: {fileID: 1709170794}
+  _pausePanel: {fileID: 156126520}
+  _pauseBackground: {fileID: 432611638}
+  _buttonPause: {fileID: 1894998487}
+  _starObject: {fileID: 1709170794}
 --- !u!114 &57864272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,9 +390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b69406d02fb2046b0a883a99a8b829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicButtonOn: {fileID: 2813774850082784717}
-  MusicButtonOff: {fileID: 2813774850082784716}
-  customMusicBG: {fileID: 237176314}
+  _musicButtonOn: {fileID: 2813774850082784717}
+  _musicButtonOff: {fileID: 2813774850082784716}
+  _customMusicBG: {fileID: 237176314}
 --- !u!4 &152922223
 Transform:
   m_ObjectHideFlags: 0
@@ -423,6 +423,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3880599225167074632, guid: e30b96fb3a3e240418ba8069657fb45d, type: 3}
       propertyPath: groundMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3880599225167074632, guid: e30b96fb3a3e240418ba8069657fb45d, type: 3}
+      propertyPath: _groundMask.m_Bits
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3880599225167074634, guid: e30b96fb3a3e240418ba8069657fb45d, type: 3}
@@ -919,7 +923,6 @@ GameObject:
   - component: {fileID: 759113196}
   - component: {fileID: 759113198}
   - component: {fileID: 759113197}
-  - component: {fileID: 759113200}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1035,19 +1038,6 @@ Transform:
   m_Father: {fileID: 391332490}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &759113200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759113195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fad5ae50df562294abb79a36e1ed0c35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: 3
 --- !u!1001 &845641862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,6 +1051,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _starAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarText
       value: 
       objectReference: {fileID: 1207623340}
@@ -1069,7 +1063,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextGUI
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarTextPause
+      value: 
+      objectReference: {fileID: 1698266000}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextPause
       value: 
       objectReference: {fileID: 1698266000}
     - target: {fileID: 5545877847648132659, guid: 8f186854322a18048b3e24499dd65118, type: 3}
@@ -1763,6 +1765,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _starAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarText
       value: 
       objectReference: {fileID: 1207623340}
@@ -1771,7 +1777,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextGUI
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarTextPause
+      value: 
+      objectReference: {fileID: 1698266000}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextPause
       value: 
       objectReference: {fileID: 1698266000}
     - target: {fileID: 5545877847648132659, guid: 8f186854322a18048b3e24499dd65118, type: 3}
@@ -2243,6 +2257,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _starAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarText
       value: 
       objectReference: {fileID: 1207623340}
@@ -2251,7 +2269,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextGUI
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarTextPause
+      value: 
+      objectReference: {fileID: 1698266000}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextPause
       value: 
       objectReference: {fileID: 1698266000}
     - target: {fileID: 5545877847648132659, guid: 8f186854322a18048b3e24499dd65118, type: 3}
@@ -2474,6 +2500,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _starAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarText
       value: 
       objectReference: {fileID: 1207623340}
@@ -2482,7 +2512,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextGUI
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarTextPause
+      value: 
+      objectReference: {fileID: 1698266000}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextPause
       value: 
       objectReference: {fileID: 1698266000}
     - target: {fileID: 5545877847648132659, guid: 8f186854322a18048b3e24499dd65118, type: 3}
@@ -3017,7 +3055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4574465e31e154743a6712fa107768d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 237176314}
+  _musicSource: {fileID: 237176314}
 --- !u!4 &1978938609
 Transform:
   m_ObjectHideFlags: 0
@@ -3200,6 +3238,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _starAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarText
       value: 
       objectReference: {fileID: 1207623340}
@@ -3208,7 +3250,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextGUI
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
       propertyPath: scoreStarTextPause
+      value: 
+      objectReference: {fileID: 1698266000}
+    - target: {fileID: 3891566570834027966, guid: 8f186854322a18048b3e24499dd65118, type: 3}
+      propertyPath: _scoreStarTextPause
       value: 
       objectReference: {fileID: 1698266000}
     - target: {fileID: 5545877847648132659, guid: 8f186854322a18048b3e24499dd65118, type: 3}
@@ -3823,11 +3873,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1709170794}
     - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
+      propertyPath: _starObject
+      value: 
+      objectReference: {fileID: 1709170794}
+    - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
       propertyPath: buttonPause
       value: 
       objectReference: {fileID: 1894998487}
     - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
       propertyPath: finishBlock
+      value: 
+      objectReference: {fileID: 144957886}
+    - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
+      propertyPath: _buttonPause
+      value: 
+      objectReference: {fileID: 1894998487}
+    - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
+      propertyPath: _finishBlock
       value: 
       objectReference: {fileID: 144957886}
     - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
@@ -3843,11 +3905,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207623340}
     - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
+      propertyPath: _starNumberText
+      value: 
+      objectReference: {fileID: 1207623340}
+    - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
       propertyPath: nextLevelPositon
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
       propertyPath: starFinishNumberText
+      value: 
+      objectReference: {fileID: 1678382143}
+    - target: {fileID: 1821052975880059030, guid: b8968fe755ea4f94590955271f643055, type: 3}
+      propertyPath: _starFinishNumberText
       value: 
       objectReference: {fileID: 1678382143}
     - target: {fileID: 2828680879145472999, guid: b8968fe755ea4f94590955271f643055, type: 3}

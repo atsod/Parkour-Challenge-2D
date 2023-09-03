@@ -1,40 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class StarTrigger : MonoBehaviour
 {
-    public static int starScore;
+    public static int StarScore;
 
-    [SerializeField] private TextMeshProUGUI scoreStarTextGUI;
-    [SerializeField] private TextMeshProUGUI scoreStarTextPause;
-    [SerializeField] private int starAmount;
+    [SerializeField] private TextMeshProUGUI _scoreStarTextGUI;
+    [SerializeField] private TextMeshProUGUI _scoreStarTextPause;
+    [SerializeField] private int _starAmount;
 
-    private bool isStarTriggered = false;
+    private bool _isStarTriggered;
 
-    void Start()
+    private void Awake()
     {
-        starScore = 0;
+        StarScore = 0;
         ChangeTextGUI();
+        _isStarTriggered = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !isStarTriggered)
+        if (collision.gameObject.GetComponent<HeroMovement>() != null && !_isStarTriggered)
         {
-            isStarTriggered = true;
-            starScore++;
+            _isStarTriggered = true;
+            StarScore++;
             ChangeTextGUI();
             GetComponent<AudioSource>().Play();
-            Invoke("DestroyStar", 0.5f);
+            Invoke(nameof(DestroyStar), 0.5f);
         }
     }
 
     private void ChangeTextGUI()
     {
-        scoreStarTextGUI.text = starScore.ToString() + "/" + starAmount;
-        scoreStarTextPause.text = scoreStarTextGUI.text;
+        _scoreStarTextGUI.text = StarScore.ToString() + "/" + _starAmount;
+        _scoreStarTextPause.text = _scoreStarTextGUI.text;
     }
 
     private void DestroyStar()

@@ -1,32 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class FinishTrigger : MonoBehaviour
 {
-    [SerializeField] private GameObject finishBlock;
-    [SerializeField] private GameObject buttonPause;
-    [SerializeField] private GameObject starObject;
+    [SerializeField] private GameObject _finishBlock;
+    [SerializeField] private GameObject _buttonPause;
+    [SerializeField] private GameObject _starObject;
 
-    [SerializeField] private TextMeshProUGUI starNumberText;
-    [SerializeField] private TextMeshProUGUI starFinishNumberText;
+    [SerializeField] private TextMeshProUGUI _starNumberText;
+    [SerializeField] private TextMeshProUGUI _starFinishNumberText;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Finish();
-        LevelControllerScript.instance.ManageStarNumber(starFinishNumberText.text);
-        LevelControllerScript.instance.ManageCompletedLevel();
+        LevelDataChecker.Instance.CheckAndSetLevelStarPercentage(_starFinishNumberText.text);
+        LevelDataChecker.Instance.CheckAndSetIndexOfLastCompletedLevel();
     }
 
     private void Finish()
     {
-        finishBlock.SetActive(true);
+        _finishBlock.SetActive(true);
+        _buttonPause.SetActive(false);
+        _starObject.SetActive(false);
 
-        buttonPause.SetActive(false);
-        starObject.SetActive(false);
-
-        starFinishNumberText.text = starNumberText.text;
+        _starFinishNumberText.text = _starNumberText.text;
 
         Time.timeScale = 0f;
     }
