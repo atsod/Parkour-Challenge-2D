@@ -2,23 +2,18 @@ using UnityEngine;
 
 public class HeroMovement : MonoBehaviour
 {
-    // Тело, спрайт и коллайдер персонажа
     private Rigidbody2D _playerBody;
     private SpriteRenderer _playerSprite;
     private BoxCollider2D _playerCollider;
 
-    // Cкорость, направление перемещения и сила прыжка персонажа
     private float _moveSpeed;
     private Vector2 _jumpVector;
     private float _moveDirection;
 
-    // Маска земли
     [SerializeField] private LayerMask _groundMask;
 
-    // Состояния персонажа
     private bool _isGrounded;
 
-    // Возможные цвета игрока
     private Color _greenColor;
     private Color _redColor;
 
@@ -48,14 +43,12 @@ public class HeroMovement : MonoBehaviour
         KeyboardJump();
     }
 
-    // Движение вправо и влево стрелками и кнопка A и D
     private void KeyboardMove()
     {
         _moveDirection = Input.GetAxis("Horizontal");
         _playerBody.velocity = new Vector2(_moveDirection * _moveSpeed, _playerBody.velocity.y);
     }
 
-    // Добавляем прыжок на пробел, если игрок стоит на земле
     private void KeyboardJump()
     {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && _isGrounded)
